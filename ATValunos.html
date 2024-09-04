@@ -1,60 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Professores</title>
-    
+    <title>Cadastro de Alunos</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             background-color: #fffafa;
-            color: #0028ac; 
+            color: #0028ac;
         }
+
         .table {
             background-color: #1c1c1c;
         }
-        .table th, .table td {
-            color: #5600a7; 
+
+        .table th,
+        .table td {
+            color: #5600a7;
         }
+
         .btn-success {
             background-color: #28a745;
             border: none;
         }
+
         .breadcrumb-item a {
             color: #053ef8;
             text-decoration: none;
         }
+
         .breadcrumb-item.active {
-            color: #ff0000; 
+            color: #ff0000;
         }
+
         .btn-danger {
             background-color: #e90017;
             border: none;
         }
     </style>
 </head>
+
 <body>
 
     <div class="container mt-5">
-     
+
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Professores</li>
+                <li class="breadcrumb-item active" aria-current="page">Alunos</li>
             </ol>
         </nav>
 
-     
+
         <div class="d-flex justify-content-between align-items-center mb-3">
-            <h1>Professores</h1>
-           
-            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addprofessorModal">
+            <h1>Alunos</h1>
+
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addAlunoModal">
                 Adicionar
             </button>
         </div>
 
-        
+
         <table class="table table-hover" id="studentsTable">
             <thead>
                 <tr>
@@ -63,51 +72,63 @@
                     <th>Telefone</th>
                     <th>CPF</th>
                     <th>Estado</th>
-                    <th>Escola</th>
                     <th>Status</th>
+                    <th>Escola</th>
                     <th>Ação</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>Rogério Teles</td>
-                    <td>rogerio@gmail.com</td>
-                    <td>(81) 99999-2222</td>
-                    <td>111.222.333.44</td>
-                    <td>PE</td>
-                    <td>Alicerce</td>
-                    <td>Ativo</td>
-                    <td><button class="btn btn-danger btn-sm delete-btn">Excluir</button></td>
-                </tr>
-                <tr>
-                    <td>Sandra Maria</td>
-                    <td>sandra@gmail.com</td>
-                    <td>(11) 98481-8490</td>
-                    <td>151.146.458-54</td>
+                    <td>Igor</td>
+                    <td>igor@gmail.com</td>
+                    <td>(17) 98134-6128</td>
+                    <td>490.467.168-84</td>
                     <td>SP</td>
-                    <td>Assis Reis</td>
+                    <td>Dinorath Do Valle</td>
                     <td>Inativo</td>
                     <td><button class="btn btn-danger btn-sm delete-btn">Excluir</button></td>
                 </tr>
                 <tr>
-                    <td>Giovana Santana</td>
-                    <td>giovana@gmail.com</td>
-                    <td>(24) 97777-7777</td>
-                    <td>666.777.888.99</td>
+                    <td>Kauã</td>
+                    <td>kaua@gmail.com</td>
+                    <td>(24) 99261-1088</td>
+                    <td>464.238.548-74</td>
                     <td>RJ</td>
-                    <td>Alicerce</td>
+                    <td>Dinorath do Valle</td>
                     <td>Ativo</td>
                     <td><button class="btn btn-danger btn-sm delete-btn">Excluir</button></td>
+                </tr>
+                <tr>
+                    <td>Kamille</td>
+                    <td>kamillao@gmail.com</td>
+                    <td>(17) 99646-6169</td>
+                    <td>256.658.304-81</td>
+                    <td>SP</td>
+                    <td>Pacheco</td>
+                    <td>Ativo</td>
+                    <td><button class="btn btn-danger btn-sm delete-btn">Excluir</button></td>
+                </tr>
+                <tr>
+                    <td>Sarah</td>
+                    <td>sarah@gmail.com</td>
+                    <td>(17) 99999-6169</td>
+                    <td>465.513.091-81</td>
+                    <td>SP</td>
+                    <td>Monsenhor</td>
+                    <td>Ativo</td>
+                    <td>
+                        <button class="btn btn-danger btn-sm delete-btn">Excluir</button>
+                    </td>
                 </tr>
             </tbody>
         </table>
 
-        
+
         <div class="d-flex justify-content-end">
             <button type="button" class="btn btn-primary" id="continueButton">Continuar</button>
         </div>
 
-        
+
         <div class="modal fade" id="gradesModal" tabindex="-1" aria-labelledby="gradesModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -126,57 +147,59 @@
                             </select>
                         </div>
 
-                        
-                       
 
-                            </div>
-                        
-                        <table class="table table-hover" id="gradesTable">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Nome</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Disciplina</th>
-                                    <th scope="col">Nota</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                               
-                            </tbody>
-                        </table>
+
+
                     </div>
+
+                    <table class="table table-hover" id="gradesTable">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Email</th>
+                                <th>Disciplina</th>
+                                <th>Nota</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
+    </div>
 
     </div>
 
-   
-    <div class="modal fade" id="addStudentModal" tabindex="-1" aria-labelledby="addStudentModalLabel" aria-hidden="true">
+
+    <div class="modal fade" id="addAlunoModal" tabindex="-1" aria-labelledby="addAlunoModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addStudentModalLabel">Adicionar Aluno</h5>
+                    <h5 class="modal-title" id="addAlunoModalLabel">Adicionar Aluno</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    
+
                 </div>
                 <div class="modal-body">
-                    <form id="addStudentForm">
+                    <form id="addAlunoForm">
                         <div class="mb-3">
-                            <label for="studentName" class="form-label">Nome</label>
-                            <input type="text" class="form-control" id="studentName" required>
+                            <label for="nome" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nome" required>
                         </div>
                         <div class="mb-3">
-                            <label for="studentEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="studentEmail" required>
+                            <label for="emailaluno" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="emailaluno" required>
                         </div>
                         <div class="mb-3">
-                            <label for="studentPhone" class="form-label">Telefone</label>
-                            <input type="text" class="form-control" id="studentPhone" required oninput="formatPhone(this)" maxlength="15">
+                            <label for="telefone" class="form-label">Telefone</label>
+                            <input type="text" class="form-control" id="telefone" required oninput="formatPhone(this)"
+                                maxlength="15">
                         </div>
                         <div class="mb-3">
-                            <label for="studentCPF" class="form-label">CPF</label>
-                            <input type="text" class="form-control" id="studentCPF" required>
+                            <label for="cpf" class="form-label">CPF</label>
+                            <input type="text" class="form-control" id="cpf" required>
                         </div>
                         <div class="modal-body">
                             <div class="mb-3">
@@ -210,31 +233,32 @@
                                     <option value="RR">RR</option>
                                     <option value="AC">AC</option>
                                     <option value="SE">SE</option>
-                                    
-                                    </select>
+
+                                </select>
                             </div>
-                                    
-                        <div class="mb-3">
-                            <label for="studentSchool" class="form-label">Escola</label>
-                            <input type="text" class="form-control" id="studentSchool" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="studentStatus" class="form-label">Status</label>
-                            <select class="form-control" id="studentStatus">
-                                <option value="Ativo">Ativo</option>
-                                <option value="Inativo">Inativo</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Salvar</button>
+
+                            <div class="mb-3">
+                                <label for="escolaaluno" class="form-label">Escola</label>
+                                <input type="text" class="form-control" id="alunoescola" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="statusaluno" class="form-label">Status</label>
+                                <select class="form-control" id="statusaluno">
+                                    <option value="Ativo">Ativo</option>
+                                    <option value="Inativo">Inativo</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Salvar</button>
                     </form>
                 </div>
             </div>
         </div>
     </div>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    <script src="ATVscript.js"></script>
 
 </body>
+
 </html>

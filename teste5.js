@@ -3,7 +3,7 @@ function gerarAlerta(turno) {
     }
     
     function gerarOutroAlerta(){
-    alert("Alerta 2 Da Aula");
+    alert("Alerta Da Aula");
     }
     
     
